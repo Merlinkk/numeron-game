@@ -11,7 +11,7 @@ function numberReset(){
     console.log(score)
     timer.textContent = 5
     resetCount+=1
-    if(resetCount == 15){
+    if(resetCount == 100){
         localStorage.setItem('score',score)
         window.location.href = "./gameover.html"
     }
@@ -28,6 +28,9 @@ greaterThan.onclick = () =>{
     if(number1.textContent  >
         number2.textContent){
         score+=1
+    }else{
+        localStorage.setItem('score',score)
+        window.location.href = "./gameover.html"
     }
     numberReset()
 }
@@ -36,6 +39,9 @@ lowerThan.onclick = () =>{
     if(number1.textContent  <
         number2.textContent){
         score+=1
+    }else{
+        localStorage.setItem('score',score)
+        window.location.href = "./gameover.html"
     }
     numberReset()
 }
@@ -44,6 +50,9 @@ equalTo.onclick = () =>{
     if(number1.textContent  ==
         number2.textContent){
         score+=1
+    }else{
+        localStorage.setItem('score',score)
+        window.location.href = "./gameover.html"
     }
     numberReset()
 }
